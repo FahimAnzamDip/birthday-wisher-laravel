@@ -36,7 +36,7 @@
             <div class="widget-small info coloured-icon"><i class="icon far fa-calendar-alt fa-3x"></i>
                 <div class="info">
                     <h4>Today Is</h4>
-                    <p><b>{{ \Carbon\Carbon::now()->format('l jS \of F Y') }}</b></p>
+                    <p><b>{{ \Carbon\Carbon::now()->format('l jS F Y') }}</b></p>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="tile-title">
-                    <h3>Upcoming Birthdays</h3>
+                    <h3>Upcoming Birthdays (In 3 Days)</h3>
                 </div>
                 <div class="tile-body">
                     <div class="table-responsive">
@@ -60,14 +60,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach(\App\Models\Employee::orderBy('birth_date', 'ASC')->take(5)->get() as $key => $employee)
-                                <tr>
-                                    <td>{{ $key + 1 }}</td>
-                                    <td>{{ $employee->name }}</td>
-                                    <td>{{ $employee->phone }}</td>
-                                    <td>{{ $employee->email }}</td>
-                                    <td>{{ date('jS \of F Y', strtotime($employee->birth_date)) }}</td>
-                                </tr>
+                            @foreach(\App\Models\Employee::orderByRaw('DATE_FORMAT(birth_date, "%m-%d")')->get() as $key => $employee)
+                                @if(\Carbon\Carbon::now()->addDays(3)->format('m-d') >= \Carbon\Carbon::parse($employee->birth_date)->format('m-d'))
+                                    <tr>
+                                        <td>{{ $key + 1 }}</td>
+                                        <td>{{ $employee->name }}</td>
+                                        <td>{{ $employee->phone }}</td>
+                                        <td>{{ $employee->email }}</td>
+                                        <td>{{ date('jS F', strtotime($employee->birth_date)) }}</td>
+                                    </tr>
+                                @endif
                             @endforeach
                             </tbody>
                         </table>
