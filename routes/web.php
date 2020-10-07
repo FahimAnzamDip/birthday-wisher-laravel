@@ -8,19 +8,14 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::get('mailable', function () {
-    $employee = App\Models\Employee::find(1);
-    return new App\Mail\BirthdayMail($employee);
-});
 
 //Middleware Auth Routes
 Route::group(['middleware' => 'auth'], function () {
 
+    //Daashboard Route
     Route::get('/', function () {
         return view('dashboard', ['title' => 'Dashboard']);
     });
-
-    Route::get('/mail', 'MailsController@sendMail')->name('employees.mail');
 
     //Employee Routes
     Route::get('/employees/export', 'EmployeesController@export')->name('employees.export');
