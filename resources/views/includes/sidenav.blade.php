@@ -10,7 +10,7 @@
     <ul class="app-menu">
         <li>
             <a class="app-menu__item {{ (request()->is('/')) ? 'active' : '' }}" href="{{ url('/') }}">
-                <i class="far fa-chart-network app-menu__icon"></i><span class="app-menu__label">Dashboard</span>
+                <i class="far fa-chart-pie-alt app-menu__icon"></i><span class="app-menu__label">Dashboard</span>
             </a>
         </li>
 
