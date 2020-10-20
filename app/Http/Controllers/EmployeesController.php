@@ -12,7 +12,7 @@ class EmployeesController extends Controller
 {
 
     public function index() {
-        $title = "Dashboard - Employees";
+        $title = "Dashboard - Friends";
         $employees = Employee::latest()->get();
 
         return view('pages.employees.index', [
@@ -23,7 +23,7 @@ class EmployeesController extends Controller
 
 
     public function create() {
-        $title = "Dashboard - Create Employee";
+        $title = "Dashboard - Create Friend";
 
         return view('pages.employees.create', [
             'title' => $title
@@ -53,7 +53,7 @@ class EmployeesController extends Controller
 
 
     public function edit($id) {
-        $title = "Dashboard - Edit Employee";
+        $title = "Dashboard - Edit Friend";
         $employee = Employee::find($id);
 
         return view('pages.employees.edit', [
