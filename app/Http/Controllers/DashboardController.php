@@ -16,7 +16,6 @@ class DashboardController extends Controller
                                         ->whereDay('birth_date', '>=', $date->day);
                                 })
                                 ->orderByRaw("DAYOFMONTH('birth_date')", "ASC")
-                                ->take(3)
                                 ->get();
 
         return view('dashboard', [

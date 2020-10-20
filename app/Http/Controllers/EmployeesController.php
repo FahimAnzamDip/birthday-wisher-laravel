@@ -13,7 +13,7 @@ class EmployeesController extends Controller
 
     public function index() {
         $title = "Dashboard - Employees";
-        $employees = Employee::all();
+        $employees = Employee::latest()->get();
 
         return view('pages.employees.index', [
             'title'     => $title,
