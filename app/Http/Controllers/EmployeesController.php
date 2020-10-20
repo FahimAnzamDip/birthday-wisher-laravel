@@ -46,7 +46,7 @@ class EmployeesController extends Controller
             'birth_date' => $request->birth_date,
             'created_at' => Carbon::now()
         ]);
-        toast('Employee Created!', 'success');
+        toast('Friend Created!', 'success');
 
         return redirect()->route('employees.index');
     }
@@ -77,7 +77,7 @@ class EmployeesController extends Controller
             'phone'      => $request->phone,
             'birth_date' => $request->birth_date
         ]);
-        toast('Employee Updated!', 'success');
+        toast('Friend Updated!', 'success');
 
         return redirect()->route('employees.index');
     }
@@ -85,7 +85,7 @@ class EmployeesController extends Controller
 
     public function destroy($id) {
         Employee::find($id)->delete();
-        toast('Employee Deleted!', 'warning');
+        toast('Friend Deleted!', 'warning');
 
         return redirect()->route('employees.index');
     }
