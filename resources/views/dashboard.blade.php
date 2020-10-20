@@ -28,7 +28,7 @@
         <div class="col-md-4">
             <div class="widget-small primary coloured-icon"><i class="icon far fa-users fa-3x"></i>
                 <div class="info">
-                    <h4>Employees</h4>
+                    <h4>Friends</h4>
                     <p><b>{{ \App\Models\Employee::count() }}</b></p>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <table class="table table-hover table-striped text-center">
                             <thead>
                             <tr>
-                                <th>Employee No</th>
+                                <th>Friend No</th>
                                 <th>Name</th>
                                 <th>Mobile</th>
                                 <th>Email</th>

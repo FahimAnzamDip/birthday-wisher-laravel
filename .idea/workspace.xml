@@ -21,16 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a3636c1-8fa5-4ef6-bf64-6036c25ffcfc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/SendMails.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/SendMails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/sidenav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/sidenav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/employees/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/employees/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/employees/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/employees/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/employees/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/employees/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +210,7 @@
       <workItem from="1602066847094" duration="1475000" />
       <workItem from="1602068663264" duration="361000" />
       <workItem from="1602150425309" duration="24000" />
-      <workItem from="1603205288901" duration="7796000" />
+      <workItem from="1603205288901" duration="9241000" />
     </task>
     <servers />
   </component>
