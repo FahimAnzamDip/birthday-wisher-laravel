@@ -16,7 +16,7 @@
 
         <li>
             <a class="app-menu__item {{ (request()->is('employees*')) ? 'active' : '' }}" href="{{ route('employees.index') }}">
-                <i class="far fa-briefcase app-menu__icon"></i><span class="app-menu__label">Employees</span>
+                <i class="far fa-users app-menu__icon"></i><span class="app-menu__label">Friends</span>
             </a>
         </li>
 

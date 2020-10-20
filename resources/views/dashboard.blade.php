@@ -45,7 +45,7 @@
         <div class="col-md-12">
             <div class="tile">
                 <div class="tile-title">
-                    <h3>Upcoming Birthdays (In 3 Days)</h3>
+                    <h3>Upcoming Birthdays</h3>
                 </div>
                 <div class="tile-body">
                     <div class="table-responsive">
@@ -60,16 +60,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach(\App\Models\Employee::orderByRaw('DATE_FORMAT(birth_date, "%m-%d")')->get() as $key => $employee)
-                                @if(\Carbon\Carbon::now()->addDays(3)->format('m-d') >= \Carbon\Carbon::parse($employee->birth_date)->format('m-d'))
-                                    <tr>
-                                        <td>{{ $key + 1 }}</td>
-                                        <td>{{ $employee->name }}</td>
-                                        <td>{{ $employee->phone }}</td>
-                                        <td>{{ $employee->email }}</td>
-                                        <td>{{ date('jS F', strtotime($employee->birth_date)) }}</td>
-                                    </tr>
-                                @endif
+                            @foreach($employees as $key => $employee)
+                                <tr>
+                                    <td>{{ $key + 1 }}</td>
+                                    <td>{{ $employee->name }}</td>
+                                    <td>{{ $employee->phone }}</td>
+                                    <td>{{ $employee->email }}</td>
+                                    <td>{{ date('jS F', strtotime($employee->birth_date)) }}</td>
+                                </tr>
                             @endforeach
                             </tbody>
                         </table>

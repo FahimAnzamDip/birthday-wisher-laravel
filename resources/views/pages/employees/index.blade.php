@@ -3,23 +3,23 @@
 @section('page-content')
     <div class="app-title">
         <div>
-            <h1>Employees</h1>
-            <p>All Service Details Here</p>
+            <h1>Friends</h1>
+            <p>All Friends Details Here</p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('/') }}"><i class="fa fa-home fa-lg"></i></a></li>
-            <li class="breadcrumb-item">Employees</li>
+            <li class="breadcrumb-item">Friends</li>
         </ul>
     </div>
 
     <div class="row mb-4">
         <div class="col-md-12 d-flex justify-content-between align-items-center">
             <div>
-                <h5 style="font-weight: normal;">All Employees</h5>
+                <h5 style="font-weight: normal;">All Friends</h5>
             </div>
             <div>
                 <a href="{{ route('employees.export') }}" class="btn btn-sm btn-info mr-3"><i class="far fa-file-export"></i> Export as Excel</a>
-                <a href="{{ route('employees.create') }}" class="btn btn-sm btn-primary"><i class="far fa-plus-circle"></i> Add Employee</a>
+                <a href="{{ route('employees.create') }}" class="btn btn-sm btn-primary"><i class="far fa-plus-circle"></i> Add Friend</a>
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
                         <table class="table table-hover table-bordered text-center" id="datatable">
                             <thead>
                             <tr>
-                                <th>Employee No</th>
+                                <th>Friend No</th>
                                 <th>Name</th>
                                 <th>Mobile</th>
                                 <th>Email</th>

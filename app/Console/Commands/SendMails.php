@@ -41,8 +41,8 @@ class SendMails extends Command
      */
     public function handle()
     {
-        $employees =  Employee::whereMonth('birth_date', '=', date('m'))
-                                ->whereDay('birth_date', '=', date('d'))
+        $employees =  Employee::whereMonth('birth_date', date('m'))
+                                ->whereDay('birth_date', date('d'))
                                 ->get();
 
         foreach ($employees as $employee) {

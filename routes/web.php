@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'auth'], function () {
 
     //Daashboard Route
-    Route::get('/', function () {
-        return view('dashboard', ['title' => 'Dashboard']);
-    });
+    Route::get('/', 'DashboardController@index');
 
     //Employee Routes
     Route::get('/employees/export', 'EmployeesController@export')->name('employees.export');

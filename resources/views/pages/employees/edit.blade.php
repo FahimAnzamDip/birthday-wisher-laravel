@@ -3,12 +3,12 @@
 @section('page-content')
     <div class="app-title">
         <div>
-            <h1>Employee - Edit</h1>
-            <p>Employee Functionality Here</p>
+            <h1>Friend - Edit</h1>
+            <p>Friend Functionality Here</p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('/') }}"><i class="fa fa-home fa-lg"></i></a></li>
-            <li class="breadcrumb-item"><a href="{{ route('employees.index') }}">Employees</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('employees.index') }}">Friends</a></li>
             <li class="breadcrumb-item">Edit</li>
         </ul>
     </div>
@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <div class="tile">
                 @include('includes.alert')
-                <h3 class="tile-title">Edit Employee</h3>
+                <h3 class="tile-title">Edit Friend</h3>
                 <form action="{{ route('employees.update', $employee->id) }}" method="POST">
                     @csrf
                     @method('patch')
@@ -43,7 +43,7 @@
 
                     </div>
                     <div class="tile-footer d-flex justify-content-end">
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Employee</button>
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Friend</button>
                     </div>
                 </form>
             </div>
