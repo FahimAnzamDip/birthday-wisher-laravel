@@ -43,7 +43,7 @@
                     {{ $employee->message->birthday_message }}
                 </p>
                 <p class="message">
-                    Best Wishes From, <strong>Tiptop Plus</strong>
+                    Best Wishes From, <strong>Wisher</strong>
                 </p>
             </div>
         </div>
