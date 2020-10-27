@@ -14,7 +14,7 @@
             padding: 50px 0;
         }
         .container {
-            width: 80%;
+            width: 95%;
             margin: 0 auto;
             background: #fff;
         }
